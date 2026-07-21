@@ -14,7 +14,6 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-  padding-bottom: 100px; /* Adjust this value to control the vertical position of the orbit */
 }
 
 div {
@@ -29,6 +28,7 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
+  vertical-align: middle;
 }
 
 .orbit-text {
