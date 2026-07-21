@@ -66,6 +66,7 @@ div {
 .parent-container {
     display: grid;
     place-items: center;
+    height: 100vh;
 }
 
 /* CSS Animation Example
