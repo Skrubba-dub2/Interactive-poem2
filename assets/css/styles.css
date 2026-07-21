@@ -54,7 +54,7 @@ div {
 }
 
 /* The collapse effect triggered by JS */
-.orbit-container.collapse .orbit-text {
+.orbit-container.collapse {
   transform: scale(0); /* Collapses the text to a point */
   /* Alternatively, you can use transform: rotate(0deg) translateX(0px) for a centered collapse */
 }

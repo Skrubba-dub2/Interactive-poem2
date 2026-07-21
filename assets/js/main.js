@@ -58,18 +58,23 @@ const orbit = document.querySelector('.orbit-text');
 orbit.addEventListener('click', () => {
   orbit.classList.add('fast-spin');
 
-  // Remove it after 500 milliseconds (0.5 seconds)
+  // Remove it after 2700 milliseconds (2.7 seconds)
   setTimeout(() => {
     orbit.classList.remove('fast-spin');
-  }, 500);
+  }, 2700);
 });
 
  const container = document.querySelector('.orbit-container');
   
+ // Add the collapse effect when the orbit container is clicked
+container.addEventListener('click', () => {
+  container.classList.add('collapse');
+
   // Collapse the text
   container.classList.add('collapse');
   
-  // Go back to normal after 1 second (1000 milliseconds)
+  // Go back to normal after 2 seconds (2000 milliseconds)
   setTimeout(() => {
     container.classList.remove('collapse');
-  }, 1000); 
+  }, 2000);
+})
