@@ -5,33 +5,68 @@ html {
 }
 
 body {
-	margin: 1rem;
+	margin: 5rem;
 	background-color: black;
-	color: whitesmoke;
+	color: #8ecae6;
 	font-size: 5rem;
 	overflow: hidden; 
-	background-image: url(../img/flames.gif);
+	background-image: url(../img/giphy.gif);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-.grid-container {
-	display: grid;
-	/* grid-template-columns: 1fr 1fr 1fr; */
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	gap: 2rem;
-	margin: 10% 4rem 0 4rem;
-}
-
-.last {
-	padding-bottom: 2rem;
-	border-bottom: 2px solid rgb(220,200,180);
-}
-
 div {
 	transition-property: transform;
 	transition-duration: 3s;
+}
+
+.orbit-container {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbit-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* This drives the smooth circular animation loop */
+  animation: spin 20s linear infinite; 
+}
+
+/* The accelerated state */
+.orbit-text.fast-spin {
+  animation-duration: 0.01s; 
+}
+
+.orbit-text span {
+  position: absolute;
+  left: 50%;
+  transform-origin: 0 400px; /* 150px matches half the container's width (the radius) */
+  font-family: monospace; /* Monospace fonts guarantee even character spacing */
+  font-size: 5rem;
+  transition: transform 0.4s ease-in-out;
+  
+}
+
+/* The collapse effect triggered by JS */
+.orbit-container.collapse .orbit-text {
+  transform: scale(0); /* Collapses the text to a point */
+  /* Alternatively, you can use transform: rotate(0deg) translateX(0px) for a centered collapse */
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.parent-container {
+    display: grid;
+    place-items: center;
 }
 
 /* CSS Animation Example

@@ -30,5 +30,46 @@ function randomize() {
     })
 }
 
-// Add event listener to call randomize function
-document.addEventListener("click", randomize);
+const textContainer = document.getElementById('orbitText');
+const text = textContainer.innerText;
+
+// Clear the original text content
+textContainer.innerText = '';
+
+// Calculate the rotation angle step for each letter
+const totalChars = text.length;
+const angleStep = 360 / totalChars;
+
+// Loop through each character to construct the circle
+text.split('').forEach((char, index) => {
+  const span = document.createElement('span');
+  span.innerText = char;
+  
+  // Calculate specific rotation for this character
+  const currentAngle = index * angleStep;
+  span.style.transform = `rotate(${currentAngle}deg)`;
+  
+  textContainer.appendChild(span);
+});
+
+const orbit = document.querySelector('.orbit-text');
+
+// Add the fast-spin class when the orbit container is clicked
+orbit.addEventListener('click', () => {
+  orbit.classList.add('fast-spin');
+
+  // Remove it after 500 milliseconds (0.5 seconds)
+  setTimeout(() => {
+    orbit.classList.remove('fast-spin');
+  }, 500);
+});
+
+ const container = document.querySelector('.orbit-container');
+  
+  // Collapse the text
+  container.classList.add('collapse');
+  
+  // Go back to normal after 1 second (1000 milliseconds)
+  setTimeout(() => {
+    container.classList.remove('collapse');
+  }, 1000); 
