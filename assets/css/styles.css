@@ -22,8 +22,8 @@ div {
 
 .orbit-container {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 800px;
+  height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +45,7 @@ div {
 .orbit-text span {
   position: absolute;
   left: 50%;
-  transform-origin: 0 100px; /* 150px matches half the container's width (the radius) */
+  transform-origin: 0 400px; /* 150px matches half the container's width (the radius) */
   font-family: monospace; /* Monospace fonts guarantee even character spacing */
   font-size: 5rem;
   transition: transform 0.4s ease-in-out;
