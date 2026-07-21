@@ -9,7 +9,7 @@ function randomNumber(min, max) {
 let divs = document.querySelectorAll(".grid-container div");
 
 // Define Randomized function
-function randomized() {
+function randomize() {
     console.log(divs.length, "randomized!");
 
     // just the grid divs
