@@ -10,7 +10,7 @@ let divs = document.querySelectorAll(".grid-container div");
 
 // Define Randomized function
 function randomize() {
-    console.log(divs.length, "randomized!");
+    console.log(divs.length, "randomize!");
 
     // just the grid divs
     divs.forEach(function(div) {
