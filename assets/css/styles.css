@@ -14,6 +14,7 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+  padding-bottom: 100px; /* Adjust this value to control the vertical position of the orbit */
 }
 
 div {
@@ -67,6 +68,7 @@ div {
 .parent-container {
     display: grid;
     place-items: center;
+    padding-bottom: 100px; /* Adjust this value to control the vertical position of the orbit */
 }
 
 /* CSS Animation Example
